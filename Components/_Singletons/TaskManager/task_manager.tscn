@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c2w74ut3kww84"]
+
+[ext_resource type="Script" uid="uid://brkkymwubvr02" path="res://Components/_Singletons/TaskManager/task_manager.gd" id="1_c633w"]
+
+[node name="TaskManager" type="Node" unique_id=1072982555]
+script = ExtResource("1_c633w")

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://d4jdmcvn8ww81"]
+
+[ext_resource type="PackedScene" uid="uid://bfdm5urafqgf3" path="res://Components/_Singletons/InteractionManager/interactable_area.tscn" id="1_lh4mc"]
+[ext_resource type="Script" uid="uid://diwr8h4xe8o28" path="res://Entities/StaticObjects/study_desk.gd" id="1_tt5qq"]
+[ext_resource type="Texture2D" uid="uid://cv0e3k3odabkk" path="res://Assets/Art/objects.png" id="1_wv6vx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tt5qq"]
+size = Vector2(26, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wv6vx"]
+size = Vector2(26, 9)
+
+[node name="StudyDesk" type="StaticBody2D" unique_id=1079431668]
+z_index = 1
+script = ExtResource("1_tt5qq")
+
+[node name="InteractableArea" parent="." unique_id=1869284898 instance=ExtResource("1_lh4mc")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=883739952]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_tt5qq")
+
+[node name="Sprites" type="Node2D" parent="." unique_id=1187672525]
+
+[node name="Desk" type="Sprite2D" parent="Sprites" unique_id=23921020]
+texture = ExtResource("1_wv6vx")
+offset = Vector2(0, -7)
+region_enabled = true
+region_rect = Rect2(0, 16, 32, 16)
+
+[node name="Chair" type="Sprite2D" parent="Sprites" unique_id=1289219015]
+position = Vector2(-4, 1)
+texture = ExtResource("1_wv6vx")
+offset = Vector2(0, -6)
+region_enabled = true
+region_rect = Rect2(32, 16, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1181597742]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_wv6vx")
+
+[connection signal="interact" from="InteractableArea" to="." method="_on_interactable_area_interact"]

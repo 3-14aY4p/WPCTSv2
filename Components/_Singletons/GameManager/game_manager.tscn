@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://yqodqidhptpg"]
+
+[ext_resource type="Script" uid="uid://crnnykwchtp53" path="res://Components/_Singletons/GameManager/game_manager.gd" id="1_4i6yy"]
+[ext_resource type="PackedScene" uid="uid://du072rnfh5v4i" path="res://GameScenes/Rooms/room_404.tscn" id="2_jco77"]
+
+[node name="GameManager" type="Node" unique_id=1695714541 node_paths=PackedStringArray("world_2d", "ui", "curr_2d_scene")]
+script = ExtResource("1_4i6yy")
+world_2d = NodePath("World2D")
+ui = NodePath("UserInterface")
+curr_2d_scene = NodePath("World2D/Room404")
+
+[node name="World2D" type="Node2D" parent="." unique_id=534717206]
+
+[node name="Room404" parent="World2D" unique_id=1542953819 instance=ExtResource("2_jco77")]
+
+[node name="UserInterface" type="Control" parent="." unique_id=652032837]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

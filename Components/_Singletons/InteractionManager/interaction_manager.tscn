@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cor5gx4i7xbii"]
+
+[ext_resource type="FontFile" uid="uid://c7tujaui44m6k" path="res://Assets/Fonts/Pixel Millennium.ttf" id="1_ijhw5"]
+[ext_resource type="Script" uid="uid://yjasydbw4o4i" path="res://Components/_Singletons/InteractionManager/interaction_manager.gd" id="1_kfkfa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e1dd1"]
+font = ExtResource("1_ijhw5")
+font_size = 8
+font_color = Color(0.69803923, 0.7607843, 0.49019608, 1)
+outline_size = 4
+outline_color = Color(0.20784314, 0.23921569, 0.27450982, 1)
+
+[node name="InteractionManager" type="Node" unique_id=1562360996]
+script = ExtResource("1_kfkfa")
+
+[node name="Label" type="Label" parent="." unique_id=324332338]
+z_index = 99
+offset_left = -52.0
+offset_right = 52.0
+offset_bottom = 10.0
+theme_override_colors/font_outline_color = Color(0.20784314, 0.23921569, 0.27450982, 1)
+theme_override_constants/outline_size = 4
+text = "[E] to interact"
+label_settings = SubResource("LabelSettings_e1dd1")
+horizontal_alignment = 1
+vertical_alignment = 1

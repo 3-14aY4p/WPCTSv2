@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bfdm5urafqgf3"]
+
+[ext_resource type="Script" uid="uid://cobch3j1iekg3" path="res://Components/_Singletons/InteractionManager/interactable_area.gd" id="1_erqqh"]
+
+[node name="InteractableArea" type="Area2D" unique_id=1869284898]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("1_erqqh")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

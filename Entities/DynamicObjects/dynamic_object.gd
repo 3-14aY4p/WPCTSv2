@@ -1,0 +1,1 @@
+class_name DynamicObject extends RigidBody2D

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ge3irl5povih"]
+
+[ext_resource type="Script" uid="uid://112pfip432w5" path="res://Components/SceneSwitching/door.gd" id="1_pha1s"]
+
+[node name="Door" type="Area2D" unique_id=1823438667 groups=["door"]]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("1_pha1s")
+metadata/_edit_group_ = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

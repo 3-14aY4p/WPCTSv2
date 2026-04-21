@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d1iah0vth3nun"]
+
+[ext_resource type="Script" uid="uid://cn87uhc3jdtmx" path="res://Components/CameraManager/camera_zone.gd" id="1_8xegu"]
+
+[node name="CameraZone" type="Node2D" unique_id=757245211 groups=["camera_area"]]
+script = ExtResource("1_8xegu")
+
+[node name="Jurisdiction" type="Polygon2D" parent="." unique_id=1730891682]
+color = Color(1, 0.20392157, 1, 0.09803922)

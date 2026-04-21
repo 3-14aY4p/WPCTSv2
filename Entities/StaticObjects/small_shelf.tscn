@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dmlxrba7glypm"]
+
+[ext_resource type="PackedScene" uid="uid://bfdm5urafqgf3" path="res://Components/_Singletons/InteractionManager/interactable_area.tscn" id="1_nl3b8"]
+[ext_resource type="Script" uid="uid://djryk76c520ad" path="res://Entities/StaticObjects/small_shelf.gd" id="1_xgoue"]
+[ext_resource type="Texture2D" uid="uid://cv0e3k3odabkk" path="res://Assets/Art/objects.png" id="2_xgoue"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nl3b8"]
+size = Vector2(12, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jryw6"]
+size = Vector2(12, 5)
+
+[node name="SmallShelf" type="StaticBody2D" unique_id=1196166244]
+z_index = 1
+script = ExtResource("1_xgoue")
+
+[node name="InteractableArea" parent="." unique_id=1869284898 instance=ExtResource("1_nl3b8")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1484217625]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_nl3b8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1927955340]
+texture = ExtResource("2_xgoue")
+offset = Vector2(0, -7)
+region_enabled = true
+region_rect = Rect2(16, 32, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1083393294]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_jryw6")
+
+[connection signal="interact" from="InteractableArea" to="." method="_on_interactable_area_interact"]
