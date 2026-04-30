@@ -1,0 +1,65 @@
+{
+	"start": {
+		
+	},
+	
+	"dialogue_line": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "This is a dialog block. I wonder if this works...?",
+		
+		"next": "dialogue_choice",
+	},
+	
+	"dialogue_choice": {
+		"text": "You have a few choices!! Which will you pick?",
+		
+		"choices": {
+			"this is the 1st choice": "choice 1",
+			"this is the 2nd choice": "choice 2",
+			"this is the 3rd choice": "choice 3",
+			"this is the 4th choice": "choice 4",
+		},
+	},
+	
+	"choice 1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "You chose the first one?",
+		
+		"next": "dialogue_line",
+	},
+	"choice 2": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "You chose the second one?",
+		
+		"next": "dialogue_line",
+	},
+	"choice 3": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "You chose the third one?",
+		
+		"next": "dialogue_line",
+	},
+	"choice 4": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "You chose the fourth one?",
+		
+		"next": "dialogue_line",
+	},
+	
+	"dialogue_func": {
+		"node": "/root/SaveHandler",
+		"func": "save_game",
+		"args": [],
+		"await_signal": "",
+		"hide_box": "true",
+	},
+	
+	"end": {
+		
+	}
+}

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cc70oile13cbd"]
+
+[ext_resource type="FontFile" uid="uid://plruedjc0m2t" path="res://Assets/Fonts/superstar_memesbruh03.ttf" id="1_h7y2i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s6cjy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y45s6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wr6pn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_osjom"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nlhcg"]
+
+[sub_resource type="Theme" id="Theme_hmhhg"]
+Button/colors/font_color = Color(0.42745098, 0.57254905, 0.32156864, 1)
+Button/colors/font_focus_color = Color(0.24705882, 0.38039216, 0.33333334, 1)
+Button/colors/font_hover_color = Color(0.24705882, 0.38039216, 0.33333334, 1)
+Button/colors/font_pressed_color = Color(0.24705882, 0.38039216, 0.33333334, 1)
+Button/font_sizes/font_size = 20
+Button/fonts/font = ExtResource("1_h7y2i")
+Button/styles/disabled = SubResource("StyleBoxEmpty_s6cjy")
+Button/styles/focus = SubResource("StyleBoxEmpty_y45s6")
+Button/styles/hover = SubResource("StyleBoxEmpty_wr6pn")
+Button/styles/normal = SubResource("StyleBoxEmpty_osjom")
+Button/styles/pressed = SubResource("StyleBoxEmpty_nlhcg")
+
+[node name="DialogueButton" type="Button" unique_id=455013511]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_hmhhg")

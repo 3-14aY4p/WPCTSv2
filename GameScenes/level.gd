@@ -2,7 +2,7 @@ class_name Level extends Node2D
 
 
 @onready var player: Player = get_tree().get_first_node_in_group("player")
-@onready var door_container: Node2D = $DoorContainer
+@onready var door_container = get_tree().get_nodes_in_group("door")
 
 func _ready() -> void:
 	add_to_group("game_scene")
@@ -35,7 +35,7 @@ func enter_level():
 func init_player_position():
 	var tween = get_tree().create_tween()
 	
-	for door in door_container.get_children():
+	for door in door_container:
 		if door.name == Global.last_entry_point:
 			#player.global_position = door.global_position + Global.last_entry_direction
 			player.global_position = door.global_position + (Global.last_entry_direction/2.5)
@@ -58,11 +58,11 @@ func _on_player_entered_door(door: Door):
 	Global.last_entry_point = door.entry_point
 
 func _connect_to_door():
-	for door in door_container.get_children():
+	for door in door_container:
 		if not door.player_entered_door.is_connected(_on_player_entered_door):
 			door.player_entered_door.connect(_on_player_entered_door)
 
 func _disconnect_from_door():
-	for door in door_container.get_children():
+	for door in door_container:
 		if door.player_entered_door.is_connected(_on_player_entered_door):
 			door.player_entered_door.disconnect(_on_player_entered_door)

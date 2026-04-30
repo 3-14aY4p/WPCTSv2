@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dk5hlt8h2mn8i" path="res://Containers/door_container.tscn" id="2_2bdoi"]
 [ext_resource type="PackedScene" uid="uid://d1iah0vth3nun" path="res://Components/CameraManager/camera_zone.tscn" id="3_i1npj"]
 [ext_resource type="PackedScene" uid="uid://b0773te2807r7" path="res://Containers/object_container.tscn" id="3_teg23"]
+[ext_resource type="PackedScene" uid="uid://ln3gtuek7rhh" path="res://Containers/target_area_container.tscn" id="4_3j0yg"]
 [ext_resource type="PackedScene" uid="uid://duch8anyca33v" path="res://Containers/static_object_container.tscn" id="4_s6g00"]
 [ext_resource type="PackedScene" uid="uid://ge3irl5povih" path="res://Components/SceneSwitching/door.tscn" id="4_teg23"]
 [ext_resource type="PackedScene" uid="uid://ld186ov0y3mj" path="res://Containers/tile_map_container.tscn" id="5_i1npj"]
@@ -29,6 +30,8 @@ camera_zoom = Vector2(3.5, 3.5)
 
 [node name="Jurisdiction" parent="CameraZoneContainer/CameraZone2" index="0" unique_id=1730891682]
 polygon = PackedVector2Array(184, 64, 184, 208, 256, 208, 256, 64)
+
+[node name="TargetAreaContainer" parent="." unique_id=13261613 instance=ExtResource("4_3j0yg")]
 
 [node name="TileMapContainer" parent="." unique_id=1773605608 instance=ExtResource("5_i1npj")]
 

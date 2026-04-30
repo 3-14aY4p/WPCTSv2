@@ -1,3 +1,4 @@
 [gd_scene format=3 uid="uid://b0773te2807r7"]
 
 [node name="ObjectContainer" type="Node2D" unique_id=274444437 groups=["object_container"]]
+y_sort_enabled = true

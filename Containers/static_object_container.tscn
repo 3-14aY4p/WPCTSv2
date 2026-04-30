@@ -1,3 +1,4 @@
 [gd_scene format=3 uid="uid://duch8anyca33v"]
 
 [node name="StaticObjectContainer" type="Node2D" unique_id=680844024]
+y_sort_enabled = true

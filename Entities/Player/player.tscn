@@ -210,7 +210,7 @@ ProgressBar/styles/background = SubResource("StyleBoxFlat_3uyv8")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_lu8i8")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3uyv8"]
-radius = 3.0
+radius = 2.5
 height = 10.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x1y6q"]
@@ -308,7 +308,7 @@ position = Vector2(6, 0)
 shape = SubResource("CircleShape2D_x1y6q")
 
 [node name="AimPosition" type="Marker2D" parent="RayCast2D" unique_id=1052586089]
-position = Vector2(10, 0)
+position = Vector2(11, 0)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1071660422]
 zoom = Vector2(4, 4)

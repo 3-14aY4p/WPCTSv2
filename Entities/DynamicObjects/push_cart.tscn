@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b0n5rk5ei2rpo"]
+
+[ext_resource type="Texture2D" uid="uid://cv0e3k3odabkk" path="res://Assets/Art/objects.png" id="1_4wkpq"]
+[ext_resource type="Script" uid="uid://dj8xepyavlw3o" path="res://Entities/DynamicObjects/scripts/carrier_object.gd" id="1_qwmw0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qwmw0"]
+friction = 0.1
+bounce = 0.4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wkpq"]
+size = Vector2(10, 7)
+
+[node name="PushCart" type="RigidBody2D" unique_id=868907697 groups=["carrier_object"]]
+z_index = 1
+collision_layer = 4
+collision_mask = 15
+mass = 3.0
+physics_material_override = SubResource("PhysicsMaterial_qwmw0")
+lock_rotation = true
+linear_damp_mode = 1
+linear_damp = 3.0
+script = ExtResource("1_qwmw0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=411853509]
+texture = ExtResource("1_4wkpq")
+offset = Vector2(0, -6)
+region_enabled = true
+region_rect = Rect2(96, 80, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1163666343]
+position = Vector2(1, -3.5)
+shape = SubResource("RectangleShape2D_4wkpq")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=34639374]
+position = Vector2(2, -4)

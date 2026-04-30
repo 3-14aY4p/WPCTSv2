@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" uid="uid://dvdli1e53bhhb" path="res://Components/_Singletons/TaskManager/target_area.gd" id="1_dr30k"]
 
-[node name="TargetArea" type="Area2D" unique_id=319119223]
+[node name="TargetArea" type="Area2D" unique_id=319119223 groups=["target_area"]]
 script = ExtResource("1_dr30k")

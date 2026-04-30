@@ -4,3 +4,5 @@
 
 [node name="TaskManager" type="Node" unique_id=1072982555]
 script = ExtResource("1_c633w")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=517280537]

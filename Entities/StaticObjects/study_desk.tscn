@@ -8,7 +8,7 @@
 size = Vector2(26, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wv6vx"]
-size = Vector2(26, 9)
+size = Vector2(26, 11)
 
 [node name="StudyDesk" type="StaticBody2D" unique_id=1079431668]
 z_index = 1
@@ -36,7 +36,7 @@ region_enabled = true
 region_rect = Rect2(32, 16, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1181597742]
-position = Vector2(0, -5.5)
+position = Vector2(0, -4.5)
 shape = SubResource("RectangleShape2D_wv6vx")
 
 [connection signal="interact" from="InteractableArea" to="." method="_on_interactable_area_interact"]

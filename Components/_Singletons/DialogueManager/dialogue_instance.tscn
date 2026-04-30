@@ -1,0 +1,240 @@
+[gd_scene format=3 uid="uid://c1g30yjbrt5um"]
+
+[ext_resource type="Script" uid="uid://bb3f33onuqw1l" path="res://Components/_Singletons/DialogueManager/dialogue_instance.gd" id="1_qrwqs"]
+[ext_resource type="Texture2D" uid="uid://cpcnf0drup741" path="res://Assets/Art/UI.png" id="2_62fkr"]
+[ext_resource type="FontFile" uid="uid://plruedjc0m2t" path="res://Assets/Fonts/superstar_memesbruh03.ttf" id="3_qp1y2"]
+[ext_resource type="Texture2D" uid="uid://urknib8n4pcn" path="res://Assets/Art/portraits.png" id="3_yri3u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s6cjy"]
+font = ExtResource("3_qp1y2")
+font_size = 24
+font_color = Color(0.6627451, 0.72156864, 0.46666667, 1)
+outline_size = 12
+outline_color = Color(0.19607843, 0.22745098, 0.25882354, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y45s6"]
+atlas = ExtResource("3_yri3u")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qp1y2"]
+atlas = ExtResource("3_yri3u")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wr6pn"]
+atlas = ExtResource("3_yri3u")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osjom"]
+atlas = ExtResource("3_yri3u")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlhcg"]
+atlas = ExtResource("3_yri3u")
+region = Rect2(0, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmhhg"]
+atlas = ExtResource("3_yri3u")
+region = Rect2(32, 48, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s6cjy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y45s6")
+}],
+"loop": true,
+"name": &"dm",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qp1y2")
+}],
+"loop": true,
+"name": &"mc",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wr6pn")
+}],
+"loop": true,
+"name": &"mt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_osjom")
+}],
+"loop": true,
+"name": &"pf",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlhcg")
+}],
+"loop": true,
+"name": &"rand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmhhg")
+}],
+"loop": true,
+"name": &"unkn",
+"speed": 5.0
+}]
+
+[sub_resource type="Theme" id="Theme_qp1y2"]
+default_font = ExtResource("3_qp1y2")
+default_font_size = 20
+RichTextLabel/colors/default_color = Color(0.6627451, 0.72156864, 0.46666667, 1)
+RichTextLabel/colors/font_outline_color = Color(0.19607843, 0.22745098, 0.25882354, 1)
+RichTextLabel/constants/outline_size = 12
+RichTextLabel/fonts/normal_font = ExtResource("3_qp1y2")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fes4l"]
+atlas = ExtResource("2_62fkr")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lxbs"]
+atlas = ExtResource("2_62fkr")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2ver"]
+atlas = ExtResource("2_62fkr")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5y1i"]
+atlas = ExtResource("2_62fkr")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3qlue"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fes4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lxbs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2ver")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5y1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2ver")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lxbs")
+}],
+"loop": true,
+"name": &"ready",
+"speed": 5.0
+}]
+
+[node name="DialogueInstance" type="Control" unique_id=1290065068]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qrwqs")
+dialogue_file = "res://JSON files/_template.json"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=19607380]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1059957652]
+anchors_preset = -1
+anchor_top = 0.62222224
+anchor_right = 1.0
+anchor_bottom = 1.0000001
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 15
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/MarginContainer" unique_id=1133421123]
+layout_mode = 2
+texture = ExtResource("2_62fkr")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="CharacterName" type="Label" parent="CanvasLayer/MarginContainer/NinePatchRect" unique_id=1143908181]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25918368
+anchor_top = -0.19811335
+anchor_right = 0.9918367
+anchor_bottom = 0.028301742
+grow_horizontal = 0
+grow_vertical = 0
+text = "Colin"
+label_settings = SubResource("LabelSettings_s6cjy")
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/NinePatchRect" unique_id=1335216960]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.026530612
+anchor_top = 0.12264136
+anchor_right = 0.9734694
+anchor_bottom = 0.8773583
+metadata/_edit_use_anchors_ = true
+
+[node name="PortraitContainer" type="Control" parent="CanvasLayer/MarginContainer/NinePatchRect/HBoxContainer" unique_id=208022038]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+
+[node name="CharacterPortrait" type="AnimatedSprite2D" parent="CanvasLayer/MarginContainer/NinePatchRect/HBoxContainer/PortraitContainer" unique_id=2071016575]
+unique_name_in_owner = true
+position = Vector2(51, -8)
+scale = Vector2(3.75, 3.75)
+sprite_frames = SubResource("SpriteFrames_s6cjy")
+animation = &"mc"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/NinePatchRect/HBoxContainer" unique_id=594738985]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="DialogueLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/NinePatchRect/HBoxContainer/VBoxContainer" unique_id=1882307091]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_qp1y2")
+bbcode_enabled = true
+text = "Definitely not gonna be a healthy talk with Prof. Candice later, though…"
+fit_content = true
+scroll_active = false
+
+[node name="ButtonContainer" type="GridContainer" parent="CanvasLayer/MarginContainer/NinePatchRect/HBoxContainer/VBoxContainer" unique_id=1659735954]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[node name="IndicatorSprite" type="AnimatedSprite2D" parent="CanvasLayer/MarginContainer/NinePatchRect/HBoxContainer" unique_id=1926549328]
+unique_name_in_owner = true
+visible = false
+position = Vector2(452, 68)
+scale = Vector2(1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_3qlue")
+animation = &"ready"
+autoplay = "ready"
+frame_progress = 0.75898325
