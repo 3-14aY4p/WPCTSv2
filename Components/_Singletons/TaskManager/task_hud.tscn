@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://br2sy8y4lloyu"]
+
+[ext_resource type="Script" uid="uid://b0i0w1rcyyppu" path="res://Components/_Singletons/TaskManager/task_hud.gd" id="1_26bej"]
+[ext_resource type="Texture2D" uid="uid://cpcnf0drup741" path="res://Assets/Art/UI.png" id="1_ju2vx"]
+[ext_resource type="FontFile" uid="uid://plruedjc0m2t" path="res://Assets/Fonts/superstar_memesbruh03.ttf" id="2_26bej"]
+
+[node name="TaskHUD" type="Control" unique_id=2023230094]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_26bej")
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=269673368]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 16.0
+offset_right = 392.0
+offset_bottom = 77.0
+texture = ExtResource("1_ju2vx")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect" unique_id=727770449]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06250004
+anchor_top = 0.1754386
+anchor_right = 0.9375
+anchor_bottom = 0.84210527
+metadata/_edit_use_anchors_ = true
+
+[node name="TimeLabel" type="RichTextLabel" parent="NinePatchRect/HBoxContainer" unique_id=760679626]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.69411767, 0.7372549, 0.48235294, 1)
+theme_override_fonts/normal_font = ExtResource("2_26bej")
+theme_override_fonts/bold_font = ExtResource("2_26bej")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "1:00"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect3" type="ColorRect" parent="NinePatchRect/HBoxContainer" unique_id=1778960353]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+color = Color(0.25882354, 0.4, 0.3529412, 1)
+
+[node name="GoalLabel" type="RichTextLabel" parent="NinePatchRect/HBoxContainer" unique_id=293399045]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.69411767, 0.7372549, 0.48235294, 1)
+theme_override_fonts/normal_font = ExtResource("2_26bej")
+theme_override_fonts/bold_font = ExtResource("2_26bej")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "0 out of 10"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

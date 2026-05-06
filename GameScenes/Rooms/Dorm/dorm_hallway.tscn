@@ -24,7 +24,7 @@ script = ExtResource("1_whws8")
 [node name="CameraZoneContainer" parent="." unique_id=651658949 instance=ExtResource("1_q4wpp")]
 
 [node name="CameraZone" parent="CameraZoneContainer" unique_id=757245211 instance=ExtResource("3_kfqro")]
-camera_zoom = Vector2(3, 3)
+camera_zoom = Vector2(5, 5)
 
 [node name="Jurisdiction" parent="CameraZoneContainer/CameraZone" index="0" unique_id=1730891682]
 polygon = PackedVector2Array(-16, 48, -16, 112, 224, 112, 224, 128, 256, 128, 256, 48)

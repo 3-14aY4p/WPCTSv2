@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://drmg7l6c3ae5u"]
+
+[ext_resource type="Texture2D" uid="uid://cv0e3k3odabkk" path="res://Assets/Art/objects.png" id="1_1kfls"]
+[ext_resource type="Script" uid="uid://pfo0bqq0bftx" path="res://Entities/DynamicObjects/scripts/dynamic_object.gd" id="1_tdkvd"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tdkvd"]
+friction = 0.4
+bounce = 0.3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdkvd"]
+size = Vector2(8, 5)
+
+[node name="Stool" type="RigidBody2D" unique_id=727023070 groups=["pickable_object"]]
+z_index = 1
+collision_layer = 4
+collision_mask = 15
+mass = 3.0
+physics_material_override = SubResource("PhysicsMaterial_tdkvd")
+lock_rotation = true
+linear_damp_mode = 1
+linear_damp = 3.0
+script = ExtResource("1_tdkvd")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=545381437]
+texture = ExtResource("1_1kfls")
+offset = Vector2(0, -4)
+region_enabled = true
+region_rect = Rect2(80, 80, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=157946669]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_tdkvd")

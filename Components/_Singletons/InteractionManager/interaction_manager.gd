@@ -9,6 +9,9 @@ var can_interact: bool = true
 var nearest: InteractableArea
 
 func _process(delta: float) -> void:
+	if not player:
+		player = get_tree().get_first_node_in_group("player")
+		
 	active_areas = active_areas.filter(func(a): return is_instance_valid(a))
 	
 	if not active_areas.is_empty() and can_interact:

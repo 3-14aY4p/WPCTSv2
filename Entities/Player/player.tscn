@@ -210,7 +210,7 @@ ProgressBar/styles/background = SubResource("StyleBoxFlat_3uyv8")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_lu8i8")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3uyv8"]
-radius = 2.5
+radius = 3.0
 height = 10.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x1y6q"]

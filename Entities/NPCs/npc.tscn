@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cu1ue715k5t1t"]
+
+[ext_resource type="Script" uid="uid://bx2bc8x8vbhgo" path="res://Entities/NPCs/npc.gd" id="1_hnw2t"]
+[ext_resource type="Texture2D" uid="uid://rxdls2kx0elm" path="res://Assets/Art/npc.png" id="1_mky6d"]
+[ext_resource type="PackedScene" uid="uid://bfdm5urafqgf3" path="res://Components/_Singletons/InteractionManager/interactable_area.tscn" id="2_0hmb5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0hmb5"]
+radius = 3.0
+height = 10.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mky6d"]
+radius = 3.0
+height = 10.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnw2t"]
+atlas = ExtResource("1_mky6d")
+region = Rect2(0, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hmb5"]
+atlas = ExtResource("1_mky6d")
+region = Rect2(16, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsr1g"]
+atlas = ExtResource("1_mky6d")
+region = Rect2(32, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5nax"]
+atlas = ExtResource("1_mky6d")
+region = Rect2(48, 96, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ccf4d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnw2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hmb5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsr1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5nax")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[node name="NPC" type="CharacterBody2D" unique_id=551347510 groups=["npc"]]
+z_index = 1
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 15
+script = ExtResource("1_hnw2t")
+
+[node name="InteractableArea" parent="." unique_id=1869284898 instance=ExtResource("2_0hmb5")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=321156653]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_0hmb5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=899879445]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_mky6d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=82878895]
+sprite_frames = SubResource("SpriteFrames_ccf4d")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.120292716
+offset = Vector2(0, -8)
+
+[connection signal="interact" from="InteractableArea" to="." method="_on_interactable_area_interact"]
+[connection signal="interaction_available" from="InteractableArea" to="." method="_on_interactable_area_interaction_available"]
+[connection signal="interaction_unavailable" from="InteractableArea" to="." method="_on_interactable_area_interaction_unavailable"]

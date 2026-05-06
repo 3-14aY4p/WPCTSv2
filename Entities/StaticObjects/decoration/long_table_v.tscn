@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bwvxby8plxuvb"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l708e"]
+load_path = "res://.godot/imported/objects.png-c3e6165232f47a040fd6a29a18b5e615.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nlme"]
+size = Vector2(14, 36)
+
+[node name="LongTable_V" type="StaticBody2D" unique_id=1071402627]
+z_index = 1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=549958583]
+texture = SubResource("CompressedTexture2D_l708e")
+offset = Vector2(0, -20)
+region_enabled = true
+region_rect = Rect2(48, 64, 16, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=442872089]
+position = Vector2(0, -18)
+shape = SubResource("RectangleShape2D_2nlme")

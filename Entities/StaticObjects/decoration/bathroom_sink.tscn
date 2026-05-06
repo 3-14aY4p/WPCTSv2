@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cukpgb8d76yj0"]
+
+[ext_resource type="Texture2D" uid="uid://cv0e3k3odabkk" path="res://Assets/Art/objects.png" id="1_fcq1l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ll3w"]
+size = Vector2(32, 9)
+
+[node name="BathroomSink" type="StaticBody2D" unique_id=1463857944]
+z_index = 1
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1786140074]
+texture = ExtResource("1_fcq1l")
+offset = Vector2(0, -7)
+region_enabled = true
+region_rect = Rect2(48, 48, 32, 16)
+
+[node name="Mirror" type="Sprite2D" parent="Sprite2D" unique_id=41231583]
+texture = ExtResource("1_fcq1l")
+offset = Vector2(0, -17)
+region_enabled = true
+region_rect = Rect2(16, 48, 32, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1976591883]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_0ll3w")

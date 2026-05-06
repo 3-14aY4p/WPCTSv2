@@ -27,8 +27,7 @@ func physics_update(delta: float):
 		if collided_obj:
 			player.applied_force = player.force_meter.value * 4
 			player.force_dir = player.mouse_dir
-			
-			collided_obj.apply_central_impulse(player.mouse_dir * (player.applied_force))
+			collided_obj.apply_shove(player.force_dir, player.applied_force)
 			
 			player.set_collision_layer_value(4, true)
 			player.force_meter.value = 0

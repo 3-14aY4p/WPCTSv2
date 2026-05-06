@@ -1,6 +1,10 @@
 {
 	"start": {
+		"name": "",
+		"anim": "",
+		"text": "",
 		
+		"next": "",
 	},
 	
 	"dialogue_line": {
@@ -55,8 +59,10 @@
 		"node": "/root/SaveHandler",
 		"func": "save_game",
 		"args": [],
-		"await_signal": "",
-		"hide_box": "true",
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
 	},
 	
 	"end": {

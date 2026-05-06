@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cpwx4uuqsfwki"]
+
+[ext_resource type="Texture2D" uid="uid://cv0e3k3odabkk" path="res://Assets/Art/objects.png" id="1_sraeo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sraeo"]
+size = Vector2(8, 14)
+
+[node name="Cubby_V" type="StaticBody2D" unique_id=2007048358]
+z_index = 1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=56591684]
+texture = ExtResource("1_sraeo")
+offset = Vector2(0, -9)
+region_enabled = true
+region_rect = Rect2(160, 32, 16, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1848365116]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_sraeo")

@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://b4h82uv6m1360"]
+
+[ext_resource type="Script" uid="uid://bvpvi6vl2f3eq" path="res://Components/_Singletons/TaskManager/task_details.gd" id="1_3jaqi"]
+[ext_resource type="Texture2D" uid="uid://cpcnf0drup741" path="res://Assets/Art/UI.png" id="1_27i0d"]
+[ext_resource type="FontFile" uid="uid://c7tujaui44m6k" path="res://Assets/Fonts/Pixel Millennium.ttf" id="2_asnvm"]
+[ext_resource type="FontFile" uid="uid://plruedjc0m2t" path="res://Assets/Fonts/superstar_memesbruh03.ttf" id="2_vas3y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3jaqi"]
+font = ExtResource("2_asnvm")
+font_size = 24
+font_color = Color(0.7058824, 0.7490196, 0.47843137, 1)
+outline_size = 14
+outline_color = Color(0.20392157, 0.23529412, 0.27058825, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bkhqj"]
+font = ExtResource("2_vas3y")
+font_size = 20
+font_color = Color(0.7058824, 0.7490196, 0.47843137, 1)
+
+[node name="TaskDetails" type="Control" unique_id=716585790]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3jaqi")
+metadata/_edit_use_anchors_ = true
+
+[node name="BoxLabel" type="Label" parent="." unique_id=127980468]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0375
+anchor_top = 0.08888889
+anchor_right = 0.4
+anchor_bottom = 0.15555556
+text = "CURRENT TASK"
+label_settings = SubResource("LabelSettings_3jaqi")
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1560042813]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.15555556
+anchor_right = 0.425
+anchor_bottom = 0.6888889
+texture = ExtResource("1_27i0d")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect" unique_id=255438395]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02631579
+anchor_top = 0.038135596
+anchor_right = 0.9736842
+anchor_bottom = 0.96292377
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer" unique_id=65715967]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=71407961]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+text = "Aren’t you that kid from weeks ago?"
+label_settings = SubResource("LabelSettings_bkhqj")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=199840479]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+color = Color(0.25882354, 0.4, 0.3529412, 1)
+
+[node name="DetailsLabel" type="RichTextLabel" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=228574220]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.4509804, 0.6039216, 0.3372549, 1)
+theme_override_fonts/normal_font = ExtResource("2_vas3y")
+theme_override_fonts/bold_font = ExtResource("2_vas3y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[u]Rescue[/u] the mysterious kid stuck in the last cubicle. There must be a key somewhere… or is there?"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=1790236763]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+color = Color(0.25882354, 0.4, 0.3529412, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=377615379]
+layout_mode = 2
+
+[node name="TimeLabel" type="RichTextLabel" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=205956496]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.69411767, 0.7372549, 0.48235294, 1)
+theme_override_fonts/normal_font = ExtResource("2_vas3y")
+theme_override_fonts/bold_font = ExtResource("2_vas3y")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "1:00"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect3" type="ColorRect" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1064349253]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+color = Color(0.25882354, 0.4, 0.3529412, 1)
+
+[node name="GoalLabel" type="RichTextLabel" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1177843804]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.69411767, 0.7372549, 0.48235294, 1)
+theme_override_fonts/normal_font = ExtResource("2_vas3y")
+theme_override_fonts/bold_font = ExtResource("2_vas3y")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "0 out of 10"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c4k7we3ffxo07"]
+
+[ext_resource type="Texture2D" uid="uid://cv0e3k3odabkk" path="res://Assets/Art/objects.png" id="1_raod4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5cpr"]
+size = Vector2(24, 6)
+
+[node name="Cubby_H" type="StaticBody2D" unique_id=1053357456]
+z_index = 1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=565221579]
+texture = ExtResource("1_raod4")
+offset = Vector2(0, -6)
+region_enabled = true
+region_rect = Rect2(128, 32, 32, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=199288435]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_o5cpr")

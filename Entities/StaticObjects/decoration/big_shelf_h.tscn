@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bpm4brlfpxbpr"]
+
+[ext_resource type="Texture2D" uid="uid://cv0e3k3odabkk" path="res://Assets/Art/objects.png" id="1_npjne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5r5b6"]
+size = Vector2(24, 6)
+
+[node name="BigShelf_H" type="StaticBody2D" unique_id=281362372]
+z_index = 1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2013735613]
+texture = ExtResource("1_npjne")
+offset = Vector2(0, -9)
+region_enabled = true
+region_rect = Rect2(128, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1384553301]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_5r5b6")

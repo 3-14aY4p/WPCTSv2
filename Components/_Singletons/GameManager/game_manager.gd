@@ -8,9 +8,9 @@ class_name GameManager extends Node
 
 var scene_cache: Dictionary = {} # Store loaded scenes by path
 enum SwitchMode {
-	DELETE, # Delete from memory
-	HIDE, # Hide from scene tree
-	REMOVE, # Remove from scene tree
+	DELETE, ## Delete from memory
+	HIDE, ## Hide from scene tree
+	REMOVE, ## Remove from scene tree
 }
 
 func _ready() -> void:

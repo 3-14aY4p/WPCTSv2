@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c0xx4tqayyver"]
+
+[ext_resource type="Texture2D" uid="uid://cv0e3k3odabkk" path="res://Assets/Art/objects.png" id="1_xo60q"]
+
+[node name="Sofa_H" type="StaticBody2D" unique_id=1709974572]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1606767045]
+texture = ExtResource("1_xo60q")
+offset = Vector2(0, -7)
+region_enabled = true
+region_rect = Rect2(80, 0, 32, 16)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1492581336]
+z_index = 1
+polygon = PackedVector2Array(-8, 0, -8, -4, 8, -4, 8, 0, 13, 0, 13, -9, 11, -10, -11, -10, -13, -9, -13, 0)

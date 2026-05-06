@@ -1,0 +1,45 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I could really use some sleep right now...",
+		
+		"next": "1",
+	},
+	"1": {
+		"text": "Do you want to sleep?",
+		
+		"choices": {
+			"Yes.": "1c1",
+			"No.": "1c2",
+		}
+	},
+	"1c1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "[wave]Zzz...[/wave]",
+		
+		"next": "2p1",
+	},
+	"1c2": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "But [font size=30]ALAS[/font] !",
+		
+		"next": "2p2",
+	},
+	"2p1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "",
+		
+		"next": "",
+	},
+	"2p2": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I still got stuff to do...",
+		
+		"next": "",
+	},
+}

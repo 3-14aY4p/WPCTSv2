@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d2bjrp6rknr2y"]
+
+[ext_resource type="Texture2D" uid="uid://d1yes4poyi8qe" path="res://Assets/Art/custom_objects.png" id="1_iyvfr"]
+
+[node name="ReceptionDesk" type="StaticBody2D" unique_id=1535795463]
+z_index = 1
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=932031407]
+texture = ExtResource("1_iyvfr")
+offset = Vector2(0, -11)
+region_enabled = true
+region_rect = Rect2(48, 32, 48, 32)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=472143811]
+polygon = PackedVector2Array(-19, 0, 19, 0, 19, -8, -8, -8, -8, -18, -19, -18)

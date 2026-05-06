@@ -5,13 +5,12 @@ signal player_entered_door(door: Door, transition_type: String)
 
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
-@export var path_to_new_scene: String
-@export var entry_point: String
-@export var spawn_distance: int = 16
+@export var path_to_new_scene: String 		## File path of the next scene.
+@export var entry_point: String 			## Name of the door entered; recorded in the Global variables.
+@export var spawn_distance: int = 16 		## How far the player moves away from the door.
 @export var locked: bool = false
 
-# player's last direction, in short; where it opens to
-@export_enum("North", "South", "East", "West") var entry_direction = "South"
+@export_enum("North", "South", "East", "West") var entry_direction = "South" 	## Player's last direction; in short, where it opens to.
 @export_enum("fade_in", "fade_out") var transition_type = "fade_out"
 
 func _ready() -> void:

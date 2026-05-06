@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cbpx7le0ug0jp"]
+
+[ext_resource type="Script" uid="uid://pfo0bqq0bftx" path="res://Entities/DynamicObjects/scripts/dynamic_object.gd" id="1_67nq8"]
+[ext_resource type="Texture2D" uid="uid://cv0e3k3odabkk" path="res://Assets/Art/objects.png" id="2_fma3x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gy25"]
+size = Vector2(8, 4)
+
+[node name="Trashbin" type="RigidBody2D" unique_id=479358694 groups=["pickable_object"]]
+z_index = 1
+collision_layer = 4
+collision_mask = 15
+lock_rotation = true
+script = ExtResource("1_67nq8")
+disabled = true
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1593891388]
+texture = ExtResource("2_fma3x")
+offset = Vector2(0, -5)
+region_enabled = true
+region_rect = Rect2(0, 48, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1199226608]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_4gy25")

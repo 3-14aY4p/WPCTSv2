@@ -1,0 +1,45 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Woah... Look at all these game manuals!",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "\"When Push Comes to Shove\"?",
+		
+		"next": "2",
+	},
+	"2": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Sounds interesting...",
+		
+		"next": "3",
+	},
+	"3": {
+		"text": "Do you want to read this book?",
+		
+		"choices": {
+			"Yes.": "3c1",
+			"No.": "3c2",
+		},
+	},
+	"3c1": {
+		"name": "",
+		"anim": "",
+		"text": "",
+		
+		"next": "",
+	},
+	"3c2": {
+		"name": "",
+		"anim": "",
+		"text": "",
+		
+		"next": "",
+	},
+}

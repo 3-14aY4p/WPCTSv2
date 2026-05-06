@@ -1,8 +1,31 @@
 [gd_scene format=3 uid="uid://c2w74ut3kww84"]
 
 [ext_resource type="Script" uid="uid://brkkymwubvr02" path="res://Components/_Singletons/TaskManager/task_manager.gd" id="1_c633w"]
+[ext_resource type="PackedScene" uid="uid://b4h82uv6m1360" path="res://Components/_Singletons/TaskManager/task_details.tscn" id="2_msn18"]
+[ext_resource type="PackedScene" uid="uid://br2sy8y4lloyu" path="res://Components/_Singletons/TaskManager/task_hud.tscn" id="3_o5oxh"]
 
 [node name="TaskManager" type="Node" unique_id=1072982555]
 script = ExtResource("1_c633w")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=517280537]
+[node name="TaskTimer" type="Timer" parent="." unique_id=318545945]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=108539096]
+
+[node name="TaskInterface" type="Control" parent="CanvasLayer" unique_id=1595467365]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TaskDetails" parent="CanvasLayer/TaskInterface" unique_id=716585790 instance=ExtResource("2_msn18")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.65
+anchor_right = 0.35
+
+[node name="TaskHUD" parent="CanvasLayer/TaskInterface" unique_id=2023230094 instance=ExtResource("3_o5oxh")]
+layout_mode = 1
+anchors_preset = -1

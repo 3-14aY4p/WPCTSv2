@@ -1,0 +1,56 @@
+{
+	"0": {
+		"name": "NPC",
+		"anim": "rand",
+		"text": "I have a task for you...",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "NPC",
+		"anim": "rand",
+		"text": "Think you can do it?",
+		
+		"next": "2",
+	},
+	"2": {
+		"text": "Take on the task?",
+		
+		"choices": {
+			"yes.": "task",
+			"no, not now." : "rejected"
+		},
+	},
+	"task": {
+		"node": "/root/TaskManager",
+		"func": "load_task",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "accepted",
+	},
+	"accepted": {
+		"name": "NPC",
+		"anim": "rand",
+		"text": "Great.",
+		
+		"next": "start task",
+	},
+	"rejected": {
+		"name": "NPC",
+		"anim": "rand",
+		"text": "Oh. Too bad.",
+		
+		"next": "",
+	},
+	"start task": {
+		"node": "/root/TaskManager",
+		"func": "task_start",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+}

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cyxl73uan5crf"]
+
+[ext_resource type="Texture2D" uid="uid://d1yes4poyi8qe" path="res://Assets/Art/custom_objects.png" id="1_4m3yw"]
+
+[node name="KitchenSink" type="StaticBody2D" unique_id=2006602040]
+z_index = 1
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=986814672]
+texture = ExtResource("1_4m3yw")
+offset = Vector2(0, 1)
+region_enabled = true
+region_rect = Rect2(48, 0, 32, 32)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=553431981]
+position = Vector2(0, 13)
+polygon = PackedVector2Array(-1, 0, -15, 0, -15, -22, 15, -22, 15, -13, -1, -13)

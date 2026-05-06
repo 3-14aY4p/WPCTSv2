@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://171s3faobfuy"]
 
 [ext_resource type="Texture2D" uid="uid://cv0e3k3odabkk" path="res://Assets/Art/objects.png" id="1_f6x25"]
-[ext_resource type="Script" uid="uid://ctijb0m24px42" path="res://Entities/StaticObjects/bed.gd" id="1_n0cys"]
+[ext_resource type="Script" uid="uid://ctijb0m24px42" path="res://Entities/StaticObjects/scripts/bed.gd" id="1_n0cys"]
 [ext_resource type="PackedScene" uid="uid://bfdm5urafqgf3" path="res://Components/_Singletons/InteractionManager/interactable_area.tscn" id="2_nkben"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0cys"]

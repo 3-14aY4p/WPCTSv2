@@ -12,6 +12,10 @@ func _ready() -> void:
 	
 	enter_level()
 
+func _process(delta: float) -> void:
+	if not player:
+		player = get_tree().get_first_node_in_group("player")
+
 func enter_level():
 	_connect_to_door()
 	
@@ -37,7 +41,6 @@ func init_player_position():
 	
 	for door in door_container:
 		if door.name == Global.last_entry_point:
-			#player.global_position = door.global_position + Global.last_entry_direction
 			player.global_position = door.global_position + (Global.last_entry_direction/2.5)
 			player.animation_player.play("walk")
 			tween.tween_property(player, "global_position", door.global_position + Global.last_entry_direction, 0.5)
@@ -52,7 +55,7 @@ func _on_player_entered_door(door: Door):
 	player.state_machine.change_state("playerdisabled")
 	player.camera_2d.reparent(self)
 	
-	player.queue_free()
+	remove_child(player)
 	
 	Global.last_entry_direction = door.get_player_entry_vector()
 	Global.last_entry_point = door.entry_point

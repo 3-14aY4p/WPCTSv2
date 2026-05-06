@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://og8r343kp2rb"]
+
+[ext_resource type="Texture2D" uid="uid://cv0e3k3odabkk" path="res://Assets/Art/objects.png" id="1_jvp3e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jvp3e"]
+size = Vector2(12, 5)
+
+[node name="Closet" type="StaticBody2D" unique_id=248696638]
+z_index = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=39172842]
+texture = ExtResource("1_jvp3e")
+offset = Vector2(0, -7)
+region_enabled = true
+region_rect = Rect2(0, 32, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=24158973]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_jvp3e")

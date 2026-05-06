@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dycyckcrhanus"]
+
+[ext_resource type="Texture2D" uid="uid://cv0e3k3odabkk" path="res://Assets/Art/objects.png" id="1_q0mpc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0mpc"]
+size = Vector2(10, 6)
+
+[node name="Chair_H" type="StaticBody2D" unique_id=1456109874]
+z_index = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1349201849]
+texture = ExtResource("1_q0mpc")
+offset = Vector2(0, -6)
+region_enabled = true
+region_rect = Rect2(32, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1576531403]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_q0mpc")
